@@ -2,11 +2,21 @@ name: Python application
 
 on:
   push:
-    # branches: [ master ]
+    branches:
+      - main
     paths:
-      - 'backend/**'
-  # pull_request:
-  #   branches: [ master ]
+      - "backend/**"
+      - "!**/README.md"
+  pull_request:
+    branches:
+        - main
+# on:
+#   push:
+#     # branches: [ master ]
+#     paths:
+#       - 'backend/**'
+#   # pull_request:
+#   #   branches: [ master ]
 
 jobs:
   build:
