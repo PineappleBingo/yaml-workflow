@@ -8,7 +8,7 @@ on:
   push:
     branches: [ master ]
   paths:
-    - '**.txt'
+    - '**.py'
 
   # pull_request:
   #   branches: [ master ]
