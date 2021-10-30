@@ -12,11 +12,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        working-directory: ./backend
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python 3.9
-        working-directory: ./backend
+        # working-directory: ./backend
         uses: actions/setup-python@v2
         with:
           python-version: 3.9
