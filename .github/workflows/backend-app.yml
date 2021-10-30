@@ -18,7 +18,7 @@ jobs:
     #   run:
     #     working-directory: ./backend/app
     steps:
-      - uses: actions/checkout@v2s
+      - uses: actions/checkout@v2
       - name: Set up Python 3.9
         # working-directory: ./backend
         uses: actions/setup-python@v2
