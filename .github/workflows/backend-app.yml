@@ -9,7 +9,7 @@ on:
     # paths:
     #   - 'backend/**'
     branches: 
-      - master
+      - main
 
   # pull_request:
   #   branches: [ master ]
