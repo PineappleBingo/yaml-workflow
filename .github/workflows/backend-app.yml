@@ -8,7 +8,7 @@ on:
   push:
     branches: [ master ]
   paths:
-    - '**.py'
+    - 'backend/**'
 
   # pull_request:
   #   branches: [ master ]
