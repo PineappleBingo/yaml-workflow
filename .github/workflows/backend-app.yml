@@ -4,17 +4,17 @@ on:
   push:
     branches:
       - master
-    # paths:
-    #   -
+    paths:
+    - "./backend/**"
   # pull_request:
   #   branches: [ master ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./backend/app
+    # defaults:
+    #   run:
+    #     working-directory: ./backend/app
     steps:
       - uses: actions/checkout@v2s
       - name: Set up Python 3.9
