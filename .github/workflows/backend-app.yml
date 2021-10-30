@@ -5,8 +5,8 @@ on:
   push:
     branches: 
       - main
-    paths: 
-      - "backend/**"
+    # paths: 
+    #   - "backend/**"
 
   pull_request:
     branches:
@@ -22,9 +22,9 @@ jobs:
       matrix:
         python-version: [ "3.9" ]
     
-    # defaults:
-    #   run:
-    #     working-directory: ./backend
+    defaults:
+      run:
+        working-directory: ./backend
 
     steps:
     - uses: actions/checkout@v2
@@ -42,8 +42,8 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run migrations
-      working-directory: app
+      working-directory: ./backend/app
       run: python manage.py migrate
     - name: Run tests
-      working-directory: app
+      working-directory: ./backend/app
       run: python manage.py test
